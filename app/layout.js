@@ -4,6 +4,7 @@ import Providers from "./Providers";
 import NavBar from "@/components/NavBar/NavBar";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Search from "@/components/Search/Search";
 
 export const metadata = {
   title: "IMDb Clone",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Header />
           <NavBar />
+          <Search />
           <Suspense fallback={<Loading />}>{children}</Suspense>
         </Providers>
       </body>
