@@ -6,7 +6,6 @@ import { useSearchParams } from "next/navigation";
 const NavBarItem = ({ title, param }) => {
   const searchParams = useSearchParams();
   const genre = searchParams.get("genre");
-  console.log(genre);
 
   return (
     <div>
