@@ -1,7 +1,10 @@
+import Header from "@/components/Header/Header";
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Providers from "./Providers";
+import NavBar from "@/components/NavBar/NavBar";
+import { Suspense } from "react";
+import Loading from "./loading";
+import Search from "@/components/Search/Search";
 
 export const metadata = {
   title: "IMDb Clone",
@@ -11,7 +14,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Providers>
+          <Header />
+          <NavBar />
+          <Search />
+          <Suspense fallback={<Loading />}>{children}</Suspense>
+        </Providers>
+      </body>
     </html>
   );
 }
