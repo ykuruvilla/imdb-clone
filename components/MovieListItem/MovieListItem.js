@@ -26,7 +26,7 @@ const MovieListItem = ({ movie }) => {
           <p className="flex items-center">
             {movie.release_date || movie.first_air_date}{" "}
             <FaRegThumbsUp className="h-5 mr-1 ml-3" />
-            {movie.vote_count}
+            {movie.vote_average}
           </p>
         </div>
       </Link>
