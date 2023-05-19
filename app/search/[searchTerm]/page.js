@@ -4,7 +4,6 @@ import { getMoviesBySearchTerm } from "@/utils/api";
 const SearchPage = async ({ params }) => {
   const searchTerm = params.searchTerm;
   const searchResults = await getMoviesBySearchTerm(searchTerm);
-  console.log(searchResults);
 
   return (
     <div>
