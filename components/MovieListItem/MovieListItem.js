@@ -10,7 +10,7 @@ const MovieListItem = ({ movie }) => {
           src={`https://image.tmdb.org/t/p/original/${
             movie.backdrop_path || movie.poster_path
           }`}
-          alt={movie.name}
+          alt={movie.title || movie.name}
           width={500}
           height={300}
           className="sm:rounded-t-lg group-hover:opacity-80 transition-opacity duration-200"

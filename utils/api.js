@@ -22,3 +22,15 @@ export const getHomePageMovies = async (genre) => {
   const movies = data.results;
   return movies;
 };
+
+export const getMoviesBySearchTerm = async (searchTerm) => {
+  const res = await fetch(
+    `${API_URL}/search/movie?api_key=${API_KEY}&query=${searchTerm}&language=en-US&include_adult=false`
+  );
+  if (!res.ok) {
+    throw new Error("Error fetching data");
+  }
+  const data = await res.json();
+  const searchResults = data.results;
+  return searchResults;
+};
