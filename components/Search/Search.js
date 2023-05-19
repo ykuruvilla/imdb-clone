@@ -19,6 +19,7 @@ const Search = () => {
       return;
     }
     router.push(`/search/${search}`);
+    setSearch("");
   };
   return (
     <form
